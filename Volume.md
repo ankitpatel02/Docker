@@ -12,9 +12,8 @@ Docker volume create <name of the volume>
 ```
 docker run -v C:\Ankit\mytemp:/root/myvol -dit busybox 
 ```
-```
+```ymml
 version: '3.9'
-
 services:
   postgres:
     image: postgres:14-alpine
