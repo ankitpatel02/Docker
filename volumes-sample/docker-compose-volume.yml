@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  react-app:
+    image: nginx:alpine
+    container_name: react-app
+    ports:
+      - "8080:80"
+    restart: always
+    volumes:
+      - ./reactapp/client/build:/usr/share/nginx/html
+
+# docker compose up --build 
+# docker compose up -d
+# docker compose up --build --recreate

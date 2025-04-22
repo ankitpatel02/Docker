@@ -1,0 +1,22 @@
+
+# This application create build artifact and serve it using nginx
+# This Dockerfile is for a React application that builds the app and serves it using Nginx.
+
+FROM node:latest AS build
+WORKDIR /app
+COPY ./client/package.json ./
+COPY ./client/package-lock.json ./
+RUN npm install
+COPY ./client ./
+RUN npm run build
+
+# Nginx stage
+# We are copying the build artifact from the previous stage to the Nginx image
+# and serving it on port 80.
+
+FROM nginx:latest AS app
+COPY --from=build /app/build/ /usr/share/nginx/html
+
+# Commands to Run
+# docker build -t mynginx .
+# docker run -d -p 80:80 mynginx

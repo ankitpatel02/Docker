@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  react-app:
+    build:
+      context: ./reactapp
+      dockerfile: Dockerfile-App
+    ports:
+      - "8080:80"
+    restart: always
+    volumes:
+      - ./reactapp/client/build:/usr/share/nginx/html
+
+# docker compose up --build 
+# docker compose up -d
+# docker compose up --build --recreate
