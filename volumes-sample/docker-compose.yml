@@ -10,7 +10,7 @@ services:
     restart: always
     volumes:
       - ./reactapp/client/build:/usr/share/nginx/html
-# test
+
 # docker compose up --build 
 # docker compose up -d
 # docker compose up --build --recreate
