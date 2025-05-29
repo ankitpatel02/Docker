@@ -8,7 +8,6 @@ Docker engine is an open source technology for building and containerizing appli
 
 CLI uses _Docker API_ to control or interact with _Docker daemon_ through scripting or CLI Commands.
 
-
 #### Docker Objects
 - Image
 - Containers
