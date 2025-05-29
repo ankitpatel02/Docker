@@ -15,7 +15,7 @@ CLI uses _Docker API_ to control or interact with _Docker daemon_ through script
 - Networks
 - Volumes
 
-##### Images
+#### Images
 
 These are read-only templates used to create containers. They contain neccessary information to run containers.
 
