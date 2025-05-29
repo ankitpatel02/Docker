@@ -11,6 +11,7 @@ services:
     volumes:
       - ./reactapp/client/build:/usr/share/nginx/html
 
-# docker compose up --build
+# docker compose up --build 
+#
 # docker compose up -d
 # docker compose up --build --recreate
